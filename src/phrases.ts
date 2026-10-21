@@ -2,9 +2,9 @@ export const phrases = [
   {
     id: "crepe-chignon",
     french: "Collignon, crêpe-chignon",
-    gloss: "An invented rhyming taunt.",
+    gloss: "Collignon the squabbler.",
     explanation:
-      "Crêpe means pancake; chignon means a hair bun. The joke is the sound, not a familiar French insult.",
+      "From se crêper le chignon, literally to backcomb each other’s buns, meaning to get into a hair-pulling fight.",
   },
   {
     id: "face-de-fion",
