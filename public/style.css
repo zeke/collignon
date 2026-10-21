@@ -1,0 +1,112 @@
+:root {
+  color-scheme: light;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #292929;
+  background: #fafafa;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+main {
+  width: min(100% - 2.75rem, 41rem);
+  margin: 0 auto;
+  padding: clamp(3.5rem, 10vw, 7rem) 0 2.5rem;
+  text-align: center;
+}
+h1,
+h2,
+p {
+  margin: 0;
+}
+h1,
+.reply p {
+  font-size: clamp(1.65rem, 3.8vw, 2.55rem);
+  font-weight: 400;
+  line-height: 1.48;
+  letter-spacing: -0.025em;
+  text-wrap: pretty;
+}
+h1 {
+  font-size: clamp(2rem, 4.7vw, 3.1rem);
+  line-height: 1.3;
+  text-wrap: balance;
+}
+.speaker,
+footer,
+#audio-status {
+  font-family: system-ui, sans-serif;
+}
+.speaker {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #666;
+  margin-bottom: 1.15rem;
+}
+.speaker span {
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.reply {
+  margin-top: clamp(3rem, 8vw, 4.5rem);
+}
+.reply p + p {
+  margin-top: 1.6em;
+}
+button {
+  display: inline;
+  font: inherit;
+  font-weight: 600;
+  letter-spacing: inherit;
+  line-height: inherit;
+  color: #171717;
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+  text-decoration-color: #999;
+  transition: color 0.15s;
+}
+button:hover,
+button[aria-pressed="true"] {
+  color: #777;
+}
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #555;
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+#audio-status {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  min-height: 3rem;
+  margin: 2rem 0 0;
+  color: #555;
+}
+footer {
+  font-size: 0.7rem;
+  line-height: 1.65;
+  color: #666;
+  max-width: 30rem;
+  margin: 0.5rem auto 0;
+}
+footer p:not(:first-child) {
+  margin-top: 0.6rem;
+}
+a {
+  color: inherit;
+  text-underline-offset: 0.2em;
+}
+@media (prefers-reduced-motion: reduce) {
+  button {
+    transition: none;
+  }
+}

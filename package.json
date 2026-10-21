@@ -1,0 +1,26 @@
+{
+  "name": "collignon",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "lint": "biome check .",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test src/app.test.ts",
+    "build": "wrangler deploy --dry-run --outdir dist",
+    "audio:generate": "node --import tsx --env-file-if-exists=.env scripts/generate-audio.ts",
+    "deploy": "node scripts/deploy.mjs production",
+    "preview:deploy": "node scripts/deploy.mjs preview",
+    "preview:destroy": "node scripts/deploy.mjs destroy"
+  },
+  "dependencies": {
+    "hono": "4.13.13"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.15",
+    "@types/node": "latest",
+    "tsx": "latest",
+    "typescript": "7.0.2",
+    "wrangler": "4.151.3"
+  }
+}
