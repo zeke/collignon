@@ -1,6 +1,6 @@
 # Collignon
 
-A small French pronunciation conversation inspired by the rhyming taunts in *Amélie*. Large centered type, plain English glosses, and phrases you can tap to hear.
+A small French pronunciation conversation inspired by the rhyming taunts in *Amélie*. The film clip up top, then large left-aligned type in a centered column, plain English glosses, and phrases you can tap to hear.
 
 Built with Hono for Cloudflare Workers. Intended public address: https://collignon.ziki.boo.
 
