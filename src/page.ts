@@ -32,7 +32,7 @@ export const page = `<!doctype html>
 <p>${phrase(0)} is an invented rhyming taunt: <span lang="fr">crêpe</span> means pancake and <span lang="fr">chignon</span> means a hair bun. The joke is the sound.</p>
 <p>${phrase(1)} means “Collignon, arse-face.” <span lang="fr">Fion</span> is vulgar slang for the backside.</p>
 <p>${phrase(2)} means “Collignon, a punchable face.” A <span lang="fr">gnon</span> is a punch or a knock, so literally it’s a head for punches.</p>
-<p>And ${phrase(3)} simply means “Collignon eats onions.” An ordinary sentence becomes a childish taunt because it rhymes.</p>
+<p>${phrase(3)} simply means “Collignon eats onions.” An ordinary sentence becomes a childish taunt because it rhymes.</p>
 </section>
 <p id="audio-status" role="status" aria-live="polite"></p>
 <footer>
