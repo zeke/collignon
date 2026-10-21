@@ -18,6 +18,9 @@ export const page = `<!doctype html>
 </head>
 <body>
 <main>
+<div class="video">
+<iframe src="https://www.youtube-nocookie.com/embed/vTbcPIKxmP0?start=42" title="Amélie (2001): Collignon, Dead and Gone" allow="encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 <section aria-labelledby="zeke">
 <h2 id="zeke" class="speaker">Zeke</h2>
 <h1>${question}</h1>

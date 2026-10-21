@@ -10,7 +10,12 @@ test("the public page contains only the scoped conversation, accessible inline a
     response.headers.get("content-security-policy") ?? "",
     /media-src 'self'/,
   );
+  assert.match(
+    response.headers.get("content-security-policy") ?? "",
+    /frame-src https:\/\/www\.youtube-nocookie\.com;/,
+  );
   const html = await response.text();
+  assert.match(html, /youtube-nocookie\.com\/embed\/vTbcPIKxmP0\?start=42/);
   assert.equal((html.match(/data-audio=/g) ?? []).length, 4);
   assert.equal(
     (html.match(/aria-label="Play French pronunciation:/g) ?? []).length,
