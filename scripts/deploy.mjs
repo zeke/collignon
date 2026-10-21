@@ -74,6 +74,17 @@ if (mode === "production") {
   for (const sample of manifest.samples)
     await readFile(`public/audio/${sample.id}.mp3`);
 }
+if (mode === "destroy") {
+  // Direct API call: `wrangler delete` also lists KV namespaces, which the preview token cannot read.
+  const response = await fetch(
+    `https://api.cloudflare.com/client/v4/accounts/${account}/workers/scripts/${name}?force=true`,
+    { method: "DELETE", headers: { Authorization: `Bearer ${token}` } },
+  );
+  if (!response.ok && response.status !== 404)
+    throw new Error(`Preview deletion failed: HTTP ${response.status}`);
+  console.log(response.ok ? `Deleted ${name}` : `${name} was already deleted`);
+  process.exit(0);
+}
 const config = JSON.parse(await readFile("wrangler.jsonc", "utf8"));
 config.name = name;
 config.account_id = account;
@@ -88,9 +99,7 @@ config.main = "../src/index.ts";
 await mkdir(".wrangler", { recursive: true });
 const path = `.wrangler/${name}.json`;
 await writeFile(path, JSON.stringify(config, null, 2));
-const args =
-  mode === "destroy"
-    ? ["wrangler", "delete", "--config", path, "--force"]
-    : ["wrangler", "deploy", "--config", path];
-const result = spawnSync("npx", args, { stdio: "inherit" });
+const result = spawnSync("npx", ["wrangler", "deploy", "--config", path], {
+  stdio: "inherit",
+});
 process.exitCode = result.status ?? 1;
