@@ -15,5 +15,6 @@ app.get("/", (c) => c.html(page));
 app.get("/audio/*", (c) => c.env.ASSETS.fetch(c.req.raw));
 app.get("/style.css", (c) => c.env.ASSETS.fetch(c.req.raw));
 app.get("/audio.js", (c) => c.env.ASSETS.fetch(c.req.raw));
+app.get("/favicon.svg", (c) => c.env.ASSETS.fetch(c.req.raw));
 app.notFound((c) => c.text("Not found", 404));
 export default app;

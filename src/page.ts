@@ -13,6 +13,7 @@ export const page = `<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="A little conversation about the rhyming French taunts in Amélie.">
 <title>Collignon</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/style.css">
 <script src="/audio.js" defer></script>
 </head>
