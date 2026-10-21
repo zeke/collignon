@@ -56,7 +56,7 @@ footer,
 .reply p + p {
   margin-top: 1.6em;
 }
-button {
+[role="button"] {
   display: inline;
   font: inherit;
   font-weight: 600;
@@ -74,11 +74,11 @@ button {
   text-decoration-color: #999;
   transition: color 0.15s;
 }
-button:hover,
-button[aria-pressed="true"] {
+[role="button"]:hover,
+[role="button"][aria-pressed="true"] {
   color: #777;
 }
-button:focus-visible,
+[role="button"]:focus-visible,
 a:focus-visible {
   outline: 2px solid #555;
   outline-offset: 4px;
@@ -106,7 +106,7 @@ a {
   text-underline-offset: 0.2em;
 }
 @media (prefers-reduced-motion: reduce) {
-  button {
+  [role="button"] {
     transition: none;
   }
 }

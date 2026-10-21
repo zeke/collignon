@@ -4,7 +4,7 @@ export const question =
   "In the movie Amélie, there’s a scene where the shopkeeper’s assistant and the artist are making up funny insults for the shop owner, whose name is Collignon. Can you look up what those actual insults are, say them in French, and tell me the English translations? I don’t know what they are.";
 const phrase = (index: number) => {
   const p = phrases[index];
-  return `<button type="button" lang="fr" data-audio="${p.id}" aria-label="Play French pronunciation: ${p.french}" aria-pressed="false">${p.french}</button>`;
+  return `<span role="button" tabindex="0" lang="fr" data-audio="${p.id}" aria-label="Play French pronunciation: ${p.french}" aria-pressed="false">${p.french}</span>`;
 };
 export const page = `<!doctype html>
 <html lang="en">
@@ -24,10 +24,8 @@ export const page = `<!doctype html>
 </section>
 <section aria-labelledby="dort" class="reply">
 <h2 id="dort" class="speaker">dort</h2>
-<p>They’re little rhymes aimed at Collignon. ${phrase(0)} is an invented rhyming taunt: <span lang="fr">crêpe</span> means pancake and <span lang="fr">chignon</span> means a hair bun. The joke is the sound.</p>
-<p>${phrase(1)} means “Collignon, arse-face.” <span lang="fr">Fion</span> is vulgar slang for the backside.</p>
-<p>${phrase(2)} means “Collignon, a punchable face.” A <span lang="fr">gnon</span> is a punch or a knock, so literally it’s a head for punches.</p>
-<p>And ${phrase(3)} simply means “Collignon eats onions.” An ordinary sentence becomes a childish taunt because it rhymes.</p>
+<p>They’re little rhymes aimed at Collignon. ${phrase(0)} is an invented rhyming taunt: <span lang="fr">crêpe</span> means pancake and <span lang="fr">chignon</span> means a hair bun. The joke is the sound. ${phrase(1)} means “Collignon, arse-face.” <span lang="fr">Fion</span> is vulgar slang for the backside.</p>
+<p>${phrase(2)} means “Collignon, a punchable face.” A <span lang="fr">gnon</span> is a punch or a knock, so literally it’s a head for punches. And ${phrase(3)} simply means “Collignon eats onions.” An ordinary sentence becomes a childish taunt because it rhymes.</p>
 </section>
 <p id="audio-status" role="status" aria-live="polite"></p>
 <footer>
