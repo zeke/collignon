@@ -70,7 +70,7 @@ for (const phrase of plan.phrases) {
 }
 await writeFile(
   "public/audio/manifest.json",
-  JSON.stringify(
+  `${JSON.stringify(
     {
       complete: true,
       provider: "OpenAI",
@@ -83,7 +83,7 @@ await writeFile(
     },
     null,
     2,
-  ),
+  )}\n`,
 );
 console.log(
   "Four static MP3s saved. Review pronunciation and actual account charges before publishing.",

@@ -1,0 +1,35 @@
+{
+  "complete": true,
+  "provider": "OpenAI",
+  "model": "gpt-4o-mini-tts",
+  "voice": "coral",
+  "generated_at": "2026-10-21T03:51:02.475Z",
+  "cost_usd": null,
+  "cost_note": "Verify actual charges in the authorized OpenAI account.",
+  "samples": [
+    {
+      "id": "crepe-chignon",
+      "text": "Collignon, crêpe-chignon",
+      "bytes": 36096,
+      "sha256": "3b3c7163469315f52b1bd871c0b3482ba45fdee678dec87cd034079190d2819f"
+    },
+    {
+      "id": "face-de-fion",
+      "text": "Collignon, face de fion",
+      "bytes": 48000,
+      "sha256": "ce8f1ef0523ed2b5b096fee5d34eb325556e3043def9eed193d90f51101d57f1"
+    },
+    {
+      "id": "tete-a-gnons",
+      "text": "Collignon, tête à gnons",
+      "bytes": 37632,
+      "sha256": "ec373ec68b386606069773d60d831bca26459f734fd600582732174e814f8cc1"
+    },
+    {
+      "id": "oignons",
+      "text": "Collignon mange des oignons",
+      "bytes": 35328,
+      "sha256": "5c1c8cb4cb5105e03c1baa5c86a04789995025890d9e2c8e9897cec3c615c704"
+    }
+  ]
+}
