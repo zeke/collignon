@@ -3,7 +3,7 @@
   "provider": "OpenAI",
   "model": "gpt-4o-mini-tts",
   "voice": "coral",
-  "generated_at": "2026-10-21T03:51:02.475Z",
+  "generated_at": "2026-10-21T04:18:30.322Z",
   "cost_usd": null,
   "cost_note": "Verify actual charges in the authorized OpenAI account.",
   "samples": [
@@ -22,8 +22,8 @@
     {
       "id": "tete-a-gnons",
       "text": "Collignon, tête à gnons",
-      "bytes": 37632,
-      "sha256": "ec373ec68b386606069773d60d831bca26459f734fd600582732174e814f8cc1"
+      "bytes": 33792,
+      "sha256": "398944930088e86aea0a958e5f14d2bf0ab9b04df2f66d52158e19e3623c92de"
     },
     {
       "id": "oignons",

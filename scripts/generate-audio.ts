@@ -3,6 +3,15 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { phrases } from "../src/phrases";
 
 // Manual generation only. No CI, deploy, or browser code invokes this script.
+const instructions =
+  "Speak only these words in clear, natural metropolitan French at a measured pace. Do not imitate an actor.";
+// Per-phrase overrides for clips the default prompt mispronounced.
+const overrides: Record<string, { input: string; instructions: string }> = {
+  "tete-a-gnons": {
+    input: "Collignon, tête à gnons.",
+    instructions: `${instructions} Pronounce "tête à gnons" as three crisp syllables: "tet", "ah", "nyohn" (IPA: tɛt a ɲɔ̃). The gn is a palatal ny sound, the final s is silent.`,
+  },
+};
 const plan = {
   model: "gpt-4o-mini-tts",
   voice: "coral",
@@ -45,10 +54,9 @@ for (const phrase of plan.phrases) {
       body: JSON.stringify({
         model: plan.model,
         voice: plan.voice,
-        input: phrase.text,
+        input: overrides[phrase.id]?.input ?? phrase.text,
         response_format: "mp3",
-        instructions:
-          "Speak only these words in clear, natural metropolitan French at a measured pace. Do not imitate an actor.",
+        instructions: overrides[phrase.id]?.instructions ?? instructions,
       }),
     });
     if (!response.ok)

@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { test } from "node:test";
 import app from "./index";
 
-test("the public page contains only the scoped conversation, accessible inline audio controls, and attribution", async () => {
+test("the public page contains only the scoped conversation, accessible inline audio controls, and a source link", async () => {
   const response = await app.request("/");
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /text\/html/);
@@ -24,8 +24,7 @@ test("the public page contains only the scoped conversation, accessible inline a
   assert.match(html, /lang="fr"/);
   assert.match(html, /Zeke/);
   assert.match(html, /dort/);
-  assert.match(html, /AI-generated/);
-  assert.match(html, /languages\.org\.au/);
+  assert.match(html, /href="https:\/\/github\.com\/zeke\/collignon"/);
   assert.doesNotMatch(html, /autoplay|<ul|<ol|<audio|api.openai.com|API_KEY/);
 });
 

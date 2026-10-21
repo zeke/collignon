@@ -11,13 +11,14 @@ body {
   margin: 0;
 }
 main {
-  width: min(100% - 2.75rem, 41rem);
+  width: min(100% - 2.75rem, 38rem);
   margin: 0 auto;
-  padding: clamp(3.5rem, 10vw, 7rem) 0 2.5rem;
+  padding: 0 0 2.5rem;
 }
 .video {
+  width: min(100% - 2.75rem, 60rem);
   aspect-ratio: 16 / 9;
-  margin-bottom: clamp(3rem, 8vw, 4.5rem);
+  margin: clamp(2rem, 6vw, 4rem) auto clamp(3rem, 8vw, 4.5rem);
   background: #e5e5e5;
 }
 .video iframe {
@@ -33,19 +34,18 @@ p {
 }
 h1,
 .reply p {
-  font-size: clamp(1.65rem, 3.8vw, 2.55rem);
+  font-size: clamp(1.45rem, 3.3vw, 2.2rem);
   font-weight: 400;
   line-height: 1.48;
   letter-spacing: -0.025em;
   text-wrap: pretty;
 }
 h1 {
-  font-size: clamp(2rem, 4.7vw, 3.1rem);
+  font-size: clamp(1.75rem, 4.1vw, 2.7rem);
   line-height: 1.3;
   text-wrap: balance;
 }
 .speaker,
-footer,
 #audio-status {
   font-family: system-ui, sans-serif;
 }
@@ -64,7 +64,7 @@ footer,
   margin-top: clamp(3rem, 8vw, 4.5rem);
 }
 .reply p + p {
-  margin-top: 1.6em;
+  margin-top: 1em;
 }
 [role="button"] {
   display: inline;
@@ -103,14 +103,12 @@ a:focus-visible {
   color: #555;
 }
 footer {
-  font-size: 0.7rem;
-  line-height: 1.65;
-  color: #666;
-  max-width: 30rem;
-  margin: 0.5rem 0 0;
+  margin-top: 0.5rem;
+  text-align: center;
 }
-footer p:not(:first-child) {
-  margin-top: 0.6rem;
+footer a {
+  display: inline-block;
+  color: #666;
 }
 a {
   color: #c8102e;

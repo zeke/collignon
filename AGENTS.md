@@ -9,5 +9,5 @@ Hono Worker serving a single centered conversation page and static pronunciation
 - Generation requires explicit budget approval and an existing authorized `OPENAI_API_KEY`; never commit credentials.
 - Deployment requires existing Cloudflare authentication. Approve any new persistent credential scope separately.
 - The production deploy script alone adds collignon.ziki.boo. Preview Workers have unique names and no custom routes or shared resources.
-- GitHub repository is private; the requested production site is public.
+- The GitHub repository and the production site are both public.
 - Keep this file updated whenever meaningful project commands, conventions, or deployment details change.
