@@ -11,6 +11,12 @@ player.addEventListener("ended", () => {
   status.textContent = "";
 });
 for (const button of buttons) {
+  button.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      button.click();
+    }
+  });
   button.addEventListener("click", async () => {
     if (active === button && !player.paused) {
       player.pause();
